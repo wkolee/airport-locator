@@ -37,7 +37,7 @@ class Frame extends Component{
                     "method": "GET",
                     "headers": {
                     "x-rapidapi-host": "cometari-airportsfinder-v1.p.rapidapi.com",
-                    "x-rapidapi-key": "ee706ee66bmsh3ac5c2fd7d37ca5p14e280jsn689ff183fcd9"}}
+                    "x-rapidapi-key": `${process.env.REACT_APP_AIRPORT_CLIENT_ID}`}}
                     const response = await Axios.get(`https://cometari-airportsfinder-v1.p.rapidapi.com/api/airports/nearest?lng=${lng}&lat=${lat}`, options)
                     this.setState({airports: [response.data], loading: false, alertMsg: false});       
         });
