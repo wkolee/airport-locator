@@ -1,5 +1,5 @@
 import React from 'react';
-import gif from '../loading/200.gif';
+import gif from '../loading/s.gif';
 
 
 const Loader = ({loading})=>{
