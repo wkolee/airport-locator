@@ -1,31 +1,16 @@
-import React, { Component } from 'react';
-import Proptype from 'prop-types';
+import React, { useContext } from 'react';
+import AppContext from '../../context/GlobalContext/GlobalContext'
 
 
 
-
-class Button extends Component{
-    state = {
-        alert:'',
-        loading: false
-    }
-
-    //propsType
-    proptypes = {
-        userLoc: Proptype.func.isRequired
-    }
-    
-    getLoc = ()=> {this.props.userLoc();}
-   
-    render(){
+const Button = ()=>{
+   const appContext = useContext(AppContext);
+    const getLoc = ()=> appContext.userLoc();
         return(
             <div className='text-center'>
-                <button type="button" style={{font:'28px'}} className="btn btn-outline-primary" onClick={this.getLoc}>GET AIRPORT NEAR ME</button>
+                <button type="button" style={{font:'28px'}} className="btn btn-outline-primary" onClick={getLoc}>GET AIRPORT NEAR ME</button>
             </div>
         )
-    }
 }
-
-   
 
 export default Button;

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import AppConntext from '../../context/GlobalContext/GlobalContext';
 import gif from '../loading/s.gif';
 
 
-const Loader = ({loading})=>{
-    
+const Loader = ()=>{
+    const appContext = useContext(AppConntext);
     return(
-        loading ? <img src={gif} alt='loading...' style={{width: '200px', margin: 'auto', display: 'block'}}/> : false 
+        appContext.loading ? <img src={gif} alt='loading...' style={{width: '200px', margin: 'auto', display: 'block'}}/> : false 
     )
 }
 export default Loader;

@@ -1,0 +1,13 @@
+const SET_AIRPORT = "SET_AIRPORT";
+const SET_ALERT = "SET_ALERT";
+const SET_LOADING = "SET_LOADING";
+
+
+export {
+    SET_AIRPORT,
+    SET_ALERT, 
+    SET_LOADING
+}
+
+
+
